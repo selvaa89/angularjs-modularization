@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>POC for AngularJS Modularization</title>
+        <link rel="stylesheet" href="css/libs/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/libs/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/app.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" id="nav-bar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#nav-bar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/submodule/submodule1">ngModularization</a>
+                </div>
+                <!-- navbar-header -->
+                <div class="collapse navbar-collapse" id="nav-bar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav"><a href="#/submodule/submodule1">Submodule 1</a></li>
+                        <li class="nav"><a href="#/submodule/submodule2">Submodule 2</a></li>
+                    </ul>
+                </div>
+            </div> <!-- container-fluid -->
+        </nav>
+        <div class="container-fluid viewport">
+            <ng-view>
+            </ng-view>
+        </div>
+        <script type="text/javascript" src="libs/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+        <script type="text/javascript" src="libs/angular-resource-1.3.0-b17.min.js"></script>
+        <script type="text/javascript" src="libs/angular-route-1.3.0-b17.min.js"></script>
+        <script type="text/javascript" src="libs/require-2.1.14.js" data-main="js/main"></script>
+    </body>
+</html>
