@@ -25,9 +25,7 @@ define([], function () {
     mainApp.run(function($rootScope, $location, $route) {
         mainApp.register.rootScope = $rootScope;
         mainApp.register.route = $route;
-        $rootScope.$on( "$routeChangeStart", function () {
-            console.log(arguments)
-        })});
+    });
     mainApp.refreshRootScope = function () {
         mainApp.register.rootScope.$apply();
     }
