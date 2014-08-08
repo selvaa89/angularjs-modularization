@@ -11,7 +11,8 @@ define([], function () {
                 directive: $compileProvider.directive,
                 filter: $filterProvider.register,
                 factory: $provide.factory,
-                service: $provide.service
+                service: $provide.service,
+                routeProvider: $routeProvider
             };
 
             $routeProvider
@@ -28,7 +29,6 @@ define([], function () {
             console.log(arguments)
         })});
     mainApp.refreshRootScope = function () {
-        debugger
         mainApp.register.rootScope.$apply();
     }
     return mainApp;
