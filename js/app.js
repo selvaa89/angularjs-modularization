@@ -11,8 +11,7 @@ define([], function () {
                 directive: $compileProvider.directive,
                 filter: $filterProvider.register,
                 factory: $provide.factory,
-                service: $provide.service,
-                route: $routeProvider
+                service: $provide.service
             };
 
             $routeProvider
@@ -23,8 +22,14 @@ define([], function () {
                 .otherwise({ redirectTo: '/404'})*/
         }]);
     mainApp.run(function($rootScope, $location, $route) {
+        mainApp.register.rootScope = $rootScope;
+        mainApp.register.route = $route;
         $rootScope.$on( "$routeChangeStart", function () {
             console.log(arguments)
         })});
+    mainApp.refreshRootScope = function () {
+        debugger
+        mainApp.register.rootScope.$apply();
+    }
     return mainApp;
 });
