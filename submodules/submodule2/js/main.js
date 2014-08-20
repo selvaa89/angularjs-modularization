@@ -4,5 +4,6 @@ require(['app', 'submodules/submodule2/js/app.js'], function (App, SubModule) {
         .when('/submodule/submodule2/one', {
             templateUrl: '/submodules/submodule2/templates/one.html'
         });
+    App.registerModule('submodule1');
     App.refreshRootScope();
 });
