@@ -27,9 +27,9 @@ define([], function () {
                     var subModule = path.split('/')[2];
                     if (!mainApp.loadedModules[subModule]) {
                         require(['../submodules/' + subModule + '/js/main'], function (subModule) {
-                            
+
                                 mainApp.register.location.path(path);
-                                mainApp.refreshRootScope();    
+                                mainApp.refreshRootScope();
                         });
                     }
                     return false;
