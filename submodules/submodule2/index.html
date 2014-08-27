@@ -1,10 +1,10 @@
 <script type="text/javascript">
     "use strict"
-    //if (mainApp.isDebugMode === true) {
+    if (mainApp.isDebugMode === true) {
         require(['/submodules/submodule2/js/main.js']);
-    //} else {
-        //require(['/submodules/submodule2/js/main-min.js']);
-    //}
+    } else {
+        require(['/submodules/submodule2/js/main-min.js']);
+    }
 </script>
 <a href="#/submodule/submodule2/one">Navigate to dynamic route</a>
 <p>Module: Submodule 2</p>
