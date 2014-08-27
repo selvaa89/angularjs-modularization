@@ -26,7 +26,13 @@ define([], function () {
                     if (path === '/false') return '';
                     var subModule = path.split('/')[2];
                     if (!mainApp.loadedModules[subModule]) {
-                        require(['../submodules/' + subModule + '/js/main'], function (subModule) {
+                        var modulePath = subModule + '/js/';
+                        if (mainApp.isDebugMode) {
+                            modulePath += 'main';
+                        } else {
+                            modulePath += 'main-min';
+                        }
+                        require([modulePath], function (subModule) {
 
                                 mainApp.register.location.path(path);
                                 mainApp.refreshRootScope();
